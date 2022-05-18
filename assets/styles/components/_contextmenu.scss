@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+.contextmenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 rem(3) rem(6) rgba(black, 0.175);
+    border-radius: rem(5);
+    width: rem(200);
+    padding: rem(5) 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.15s opacity ease-in-out;
+    &--open {
+        opacity: 1;
+        pointer-events: all;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+    &__item {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__link {
+        display: block;
+        padding: 0 rem(15);
+        line-height: rem(30);
+        font-size: rem(16);
+        color: $c-dark;
+        text-decoration: none;
+        &:hover {
+            background: $c-border;
+        }
+    }
+}

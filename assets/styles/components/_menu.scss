@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+
+.menu {
+    padding: 0 rem(20);
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        width: rem(45);
+        height: rem(45);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin: 0 rem(10) rem(10) 0;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: block;
+        width: rem(45);
+        height: rem(45);
+        color: transparent;
+        font-size: 0;
+        border-radius: rem(5);
+        border: 1px solid lighten($c-dark, 5%);
+        background: {
+            size: auto rem(20);
+            position: center center;
+            repeat: no-repeat;
+        }
+        &--active,
+        &:hover,
+        &:focus {
+            background-image: $g-primary-secondary;
+            box-shadow: 0 rem(3) rem(6) rgba(black, 0.175);
+        }
+        @each $name, $file in $icons {
+            &--#{$name} {
+                background-image: url("../../images/icons/#{$file}.svg");
+                &:hover,
+                &.menu__link--active,
+                &:focus {
+                    background-image: url("../../images/icons/#{$file}.svg"),
+                        $g-primary-secondary;
+                    background-size: auto rem(20), 100% 100%;
+                }
+            }
+        }
+    }
+}

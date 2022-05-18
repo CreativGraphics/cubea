@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+.sidebar {
+    width: rem(250);
+    flex: 0 0 rem(250);
+    background: $c-dark;
+    &__header {
+        height: rem(70);
+        border-bottom: 1px solid lighten($c-dark, 5%);
+    }
+    &__logo {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        height: rem(70);
+        display: flex;
+        text-align: center;
+        line-height: rem(70);
+        font-family: "Comfortaa", sans-serif;
+        font-weight: bold;
+        font-size: rem(20);
+        align-items: center;
+    }
+    &__image {
+        height: rem(30);
+        margin: 0 auto;
+    }
+    &__title {
+        text-align: centere;
+        margin: rem(40) 0 rem(40);
+        text-align: center;
+        color: white;
+        font-size: rem(16);
+        font-weight: normal;
+    }
+}

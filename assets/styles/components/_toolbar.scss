@@ -1,0 +1,84 @@
+@charset 'UTF-8';
+
+.toolbar {
+    height: rem(70);
+    background: $c-light;
+    display: flex;
+    align-items: center;
+    padding: 0 rem(20);
+    border-bottom: 1px solid $c-border;
+    &__back {
+        padding: 0 rem(15) 0 rem(30);
+        display: block;
+        margin: 0 rem(30) 0 0;
+        color: $c-dark;
+        font-size: rem(16);
+        text-decoration: none;
+        font-weight: bold;
+        height: rem(45);
+        border-radius: rem(5);
+        line-height: rem(45);
+        border: 1px solid $c-border;
+        background: {
+            image: url("../../images/icons/arrow-left.svg");
+            repeat: no-repeat;
+            position: left rem(6) center;
+            size: auto rem(20);
+        }
+        &:hover {
+            color: white;
+            background: {
+                image: url("../../images/icons/arrow-left-white.svg"),
+                    $g-primary-secondary;
+                position: left rem(6) center, center;
+                size: auto rem(20), 100% 100%;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    &__item {
+        list-style: none;
+        & + & {
+            margin-left: rem(15);
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $c-dark;
+        font-size: rem(16);
+        font-weight: bold;
+        &--active,
+        &:hover {
+            color: $c-ps-mix;
+        }
+    }
+    &__button {
+        width: rem(40);
+        height: rem(40);
+        border: $c-border;
+        background: $c-success;
+        display: block;
+        margin-right: rem(10);
+        border-radius: rem(5);
+        font-size: 0;
+        color: transparent;
+        &:hover {
+            box-shadow: 0 rem(3) rem(6) rgba(black, 0.175);
+        }
+        &--rounded {
+            border-radius: 100%;
+        }
+        &--add {
+            background: {
+                image: url("../../images/icons/add.svg"), $g-primary-secondary;
+                size: auto rem(25), 100% 100%;
+                repeat: no-repeat;
+                position: center;
+            }
+        }
+    }
+}

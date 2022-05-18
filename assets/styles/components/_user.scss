@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-right: rem(40);
+    &__name {
+        font-size: rem(15);
+        color: $c-dark;
+    }
+    &__icon {
+        width: rem(30);
+        height: rem(30);
+        margin: 0 rem(10) 0 0;
+    }
+}

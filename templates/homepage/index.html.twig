@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% use "includes/folders.html.twig" %}
+{% use "includes/site-table.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="column column--left">
+            {{ block("folders") }}
+        </div>
+        <div class="column column--right">
+            {{ block("siteTable") }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block endbody %}
+    {{ parent() }}
+    {{ block("contextMenu") }}
+{% endblock %}

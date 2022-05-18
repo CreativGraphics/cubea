@@ -1,0 +1,24 @@
+{% block folders %}
+    <div class="folders">
+        <div class="folders__toolbar toolbar">
+            <a href="#" class="toolbar__button toolbar__button--rounded toolbar__button--add">Pridať</a>
+        </div>
+        {{ categoryList(categories) }}
+    </div>
+{% endblock %}
+
+{% block contextMenu %}
+    <div class="contextmenu contextmenu-folders">
+        <ul class="contextmenu__list">
+            <li class="contextmenu__item">
+                <a href="#" class="contextmenu__link">Item 1</a>
+            </li>
+            <li class="contextmenu__item">
+                <a href="#" class="contextmenu__link">Item 2</a>
+            </li>
+            <li class="contextmenu__item">
+                <a href="#" class="contextmenu__link">Item 3</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

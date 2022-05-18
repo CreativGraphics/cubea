@@ -1,0 +1,11 @@
+<ul class="folders__list" {{ controller ? 'data-controller="folder"' : '' }}>
+    {% for category in categories %}
+        <li class="folders__item" data-id="{{ category.id }}">
+            <button class="folders__expand">Expand</button>
+            <a href="#" class="folders__link {{ category.categories|length == 0 ? 'folders__link--empty' : '' }}" draggable="true">{{ category.title }}</a>
+            {% if category.categories|length > 0 %}
+                    {{ categoryList(category.categories, false) }}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

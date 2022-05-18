@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+.folders {
+    &__list {
+        margin: rem(20) 0;
+        padding: 0 rem(20);
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    &__expand {
+        width: rem(20);
+        height: rem(20);
+        display: block;
+        flex: 0 0 rem(20);
+        font-size: 0;
+        color: transparent;
+        border: none;
+        cursor: pointer;
+        background: {
+            color: transparent;
+            image: url("../../images/icons/folder-expand.svg");
+            size: auto rem(15);
+            position: center center;
+            repeat: no-repeat;
+        }
+        &:hover ~ .folders__link {
+            background-color: $c-border;
+        }
+    }
+    &__link {
+        display: inline-block;
+        padding: rem(5) rem(15) rem(5) rem(40);
+        border-radius: rem(5);
+        border: 1px solid $c-border;
+        color: $c-dark;
+        text-decoration: none;
+        font-size: rem(16);
+        line-height: rem(20);
+        margin: 0 0 rem(5);
+        background: {
+            image: url("../../images/icons/folder-closed-full.svg");
+            size: auto rem(20);
+            position: left rem(10) center;
+            repeat: no-repeat;
+        }
+        &--empty {
+            background-image: url("../../images/icons/folder-closed-empty.svg");
+        }
+        &:hover {
+            background-color: $c-border;
+        }
+    }
+    &__item {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .folders__list {
+            margin: 0;
+            display: none;
+        }
+        &--active {
+            > .folders__link {
+                background-color: $c-border;
+            }
+        }
+        &--expanded {
+            > .folders__link {
+                background-image: url("../../images/icons/folder-open-full.svg");
+                &--empty {
+                    background-image: url("../../images/icons/folder-open-empty.svg");
+                }
+            }
+            > .folders__expand {
+                transform: rotate(90deg);
+            }
+            .folders__list {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+$c-primary: #e17055;
+$c-secondary: #fdcb6e;
+$c-ps-mix: mix($c-primary, $c-secondary);
+$c-dark: #2f3640;
+$c-border: #dcdde1;
+$c-light: #ededed;
+$c-success: #74d16b;
+$c-danger: #e45353;
+
+$g-primary-secondary: linear-gradient(to top right, $c-primary, $c-secondary);

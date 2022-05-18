@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+
+.topbar {
+    height: rem(70);
+    border-bottom: 1px solid $c-border;
+    display: flex;
+    padding: 0 rem(30);
+    align-items: center;
+    justify-content: flex-end;
+    &__logout {
+        width: rem(45);
+        height: rem(45);
+        border-radius: rem(5);
+        background: {
+            image: url("../../images/icons/log-out.svg");
+            size: auto rem(25);
+            position: center;
+            repeat: no-repeat;
+        }
+        font-size: 0;
+        color: transparent;
+        &:hover {
+            box-shadow: 0 rem(3) rem(6) rgba(black, 0.175);
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        margin: 0 rem(40) 0 0;
+        padding: 0;
+    }
+    &__item {
+        width: rem(45);
+        height: rem(45);
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0 rem(10) 0 0;
+    }
+    &__link {
+        display: block;
+        width: rem(45);
+        height: rem(45);
+        font-size: 0;
+        color: transparent;
+        background: {
+            size: rem(20);
+            position: center center;
+            repeat: no-repeat;
+        }
+        border-radius: rem(5);
+        @each $name, $file in $icons {
+            &--#{$name} {
+                background-image: url("../../images/icons/#{$file}.svg");
+            }
+        }
+        &:hover {
+            box-shadow: 0 rem(3) rem(6) rgba(black, 0.175);
+        }
+    }
+}

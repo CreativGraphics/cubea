@@ -1,0 +1,25 @@
+{% block topbar %}
+    <div class="topbar">
+        <ul class="topbar__menu">
+            <li class="topbar__item">
+                <a href="#" class="topbar__link topbar__link--search">Hľadať</a>
+            </li>
+            <li class="topbar__item">
+                <a href="#" class="topbar__link topbar__link--list">Tasky</a>
+            </li>
+            <li class="topbar__item">
+                <a href="#" class="topbar__link topbar__link--chat">Správy</a>
+            </li>
+            <li class="topbar__item">
+                <a href="#" class="topbar__link topbar__link--bell">Oznámenia</a>
+            </li>
+        </ul>
+        <div class="user">
+            <img src="{{ asset("build/images/icons/person-circle.svg") }}" alt="Cubea Admin" class="user__icon">
+            <span class="user__name">Cubea Admin</span>
+        </div>
+        <a class="topbar__logout" href="#">
+            Odhlásiť sa
+        </a>
+    </div>
+{% endblock %}

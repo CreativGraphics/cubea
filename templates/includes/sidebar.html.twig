@@ -1,0 +1,35 @@
+{% block sidebar %}
+<div class="sidebar" data-controller="sidebar">
+    <div class="sidebar__header">
+        <a href="{{ path("app_homepage") }}" class="sidebar__logo">
+            <img src="{{ asset('build/images/cubea.svg') }}" class="sidebar__image" alt="Cubea logo">
+        </a>
+    </div>
+    <h1 class="sidebar__title">Prehľad</h1>
+    <div class="sidebar__menu menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--active menu__link--home">Prehľad</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--site">Stránky</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--template">Šablóny</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--files">Súbory</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--modules">Moduly</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--user">Použivateľia</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--settings">Nastavenia</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
